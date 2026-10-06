@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SAITAAS | Web chatbots for small businesses</title>
+<meta name="description" content="SAITAAS builds simple, rule-based web chatbots for salons, clinics and local services. Answer visitor questions and collect appointment requests on your own website, 24/7.">
+<meta name="theme-color" content="#07090f">
+<style>
+:root{--bg:#07090f;--bg2:#0c1019;--card:rgba(255,255,255,.04);--line:rgba(255,255,255,.09);--ink:#f3f5f9;--muted:#9aa4b8;--a:#5eead4;--b:#818cf8;--grad:linear-gradient(120deg,#5eead4,#818cf8)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.7 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+.wrap{max-width:1120px;margin:auto;padding:0 24px;position:relative}
+.glow{position:absolute;border-radius:50%;filter:blur(110px);opacity:.35;pointer-events:none;z-index:0}
+.g1{width:520px;height:520px;background:#5eead4;top:-180px;left:-160px;opacity:.18}
+.g2{width:560px;height:560px;background:#818cf8;top:60px;right:-220px;opacity:.22}
+header{position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);background:rgba(7,9,15,.7);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo{font-weight:800;letter-spacing:.28em;font-size:17px;text-decoration:none}
+.logo i{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{display:flex;align-items:center;gap:26px}
+nav a{text-decoration:none;color:var(--muted);font-size:14px;transition:color .2s}
+nav a:hover{color:var(--ink)}
+.pill{padding:9px 18px;border:1px solid var(--line);border-radius:999px;color:var(--ink)!important;background:var(--card)}
+.hero{padding:96px 0 80px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;z-index:1}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--a);border:1px solid rgba(94,234,212,.3);padding:6px 14px;border-radius:999px;margin-bottom:26px;background:rgba(94,234,212,.06)}
+h1{font-size:clamp(38px,6.2vw,68px);line-height:1.05;letter-spacing:-.03em;margin:0 0 22px;font-weight:800}
+h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:19px;color:var(--muted);max-width:520px;margin:0 0 34px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:15px 28px;border-radius:12px;font-weight:600;text-decoration:none;font-size:15px;transition:transform .2s,box-shadow .2s}
+.btn.p{background:var(--grad);color:#06231f;box-shadow:0 10px 40px -10px rgba(94,234,212,.55)}
+.btn.p:hover{transform:translateY(-2px);box-shadow:0 16px 44px -10px rgba(129,140,248,.7)}
+.btn.s{border:1px solid var(--line);background:var(--card)}
+.btn.s:hover{border-color:rgba(255,255,255,.25)}
+.trust{margin-top:34px;display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:13px}
+.trust span:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--a);margin-right:8px;vertical-align:middle}
+.phone{background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:28px;padding:20px;box-shadow:0 40px 90px -30px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.03) inset;max-width:400px;margin-left:auto;width:100%}
+.ph-h{display:flex;align-items:center;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:18px}
+.av{width:38px;height:38px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#06231f;font-weight:800;font-size:14px}
+.ph-h b{display:block;font-size:15px;line-height:1.2}.ph-h small{color:var(--a);font-size:12px}
+.m{max-width:84%;padding:11px 15px;border-radius:16px;font-size:14px;line-height:1.5;margin-bottom:12px;opacity:0;animation:in .6s forwards}
+.m.u{margin-left:auto;background:linear-gradient(120deg,#4f46e5,#6366f1);border-bottom-right-radius:4px}
+.m.b{background:rgba(255,255,255,.07);border-bottom-left-radius:4px}
+.m:nth-of-type(2){animation-delay:.9s}.m:nth-of-type(3){animation-delay:1.8s}.m:nth-of-type(4){animation-delay:2.7s}.m:nth-of-type(5){animation-delay:3.6s}
+@keyframes in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.cap{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+section{padding:96px 0;position:relative}
+.tag{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--a);margin-bottom:14px}
+h2{font-size:clamp(30px,4.5vw,44px);letter-spacing:-.02em;line-height:1.15;margin:0 0 16px;font-weight:700}
+.sub{color:var(--muted);max-width:560px;margin:0 0 48px;font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px;transition:transform .25s,border-color .25s,background .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(94,234,212,.35);background:rgba(255,255,255,.06)}
+.ic{width:46px;height:46px;border-radius:13px;background:rgba(94,234,212,.1);border:1px solid rgba(94,234,212,.25);display:grid;place-items:center;font-size:20px;margin-bottom:20px}
+.card h3{margin:0 0 10px;font-size:19px}.card p{margin:0;color:var(--muted);font-size:15px}
+.alt{background:linear-gradient(180deg,var(--bg),var(--bg2) 50%,var(--bg))}
+.steps{counter-reset:s}
+.step:before{counter-increment:s;content:"0" counter(s);display:block;font-size:34px;font-weight:800;margin-bottom:14px;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.demo{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.dc{display:block;text-decoration:none;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:34px;transition:.25s}
+.dc:hover{transform:translateY(-4px);border-color:rgba(129,140,248,.5)}
+.dc b{font-size:22px;display:block;margin-bottom:8px}.dc p{margin:0 0 22px;color:var(--muted);font-size:15px}.dc span{color:var(--a);font-weight:600;font-size:14px}
+.note{margin-top:26px;padding:20px 24px;border:1px solid var(--line);border-left:3px solid var(--a);border-radius:14px;background:var(--card);color:var(--muted);font-size:15px}
+.note strong{color:var(--ink)}
+.cta{text-align:center;background:linear-gradient(135deg,rgba(94,234,212,.1),rgba(129,140,248,.14));border:1px solid var(--line);border-radius:28px;padding:72px 28px;overflow:hidden}
+.cta h2{max-width:640px;margin:0 auto 14px}.cta p{color:var(--muted);max-width:480px;margin:0 auto 32px}
+.mail{display:block;margin-top:22px;color:var(--muted);font-size:14px}.mail a{color:var(--ink)}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:860px){.hero{padding:56px 0 48px}.hero .wrap{grid-template-columns:1fr;gap:44px}.phone{margin:auto}.grid,.demo{grid-template-columns:1fr}section{padding:64px 0}nav a:not(.pill){display:none}.cta{padding:52px 22px}}
+@media(prefers-reduced-motion:reduce){.m{animation:none;opacity:1}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#">SAI<i>TAAS</i></a><nav><a href="#what">Features</a><a href="#how">How it works</a><a href="#demo">Demo</a><a class="pill" href="#contact">Get a free demo</a></nav></div></header>
+
+<div class="hero"><div class="glow g1"></div><div class="glow g2"></div>
+<div class="wrap">
+<div>
+<span class="eyebrow">Web chatbots for local business</span>
+<h1>Never miss a customer <em>while you are busy.</em></h1>
+<p class="lead">SAITAAS puts a clean chat assistant on your website. It answers common questions and collects appointment requests, day and night.</p>
+<div class="btns"><a class="btn p" href="#demo">See it live</a><a class="btn s" href="#contact">Free demo for your business</a></div>
+<div class="trust"><span>Set up from your own details</span><span>Works on your website</span><span>Free demo, no obligation</span></div>
+</div>
+<div>
+<div class="phone" aria-label="Example chat conversation">
+<div class="ph-h"><div class="av">S</div><div><b>Glow Salon</b><small>Online now</small></div></div>
+<div class="m u">What time do you open on Saturday?</div>
+<div class="m b">We are open Saturday 10am to 6pm.</div>
+<div class="m u">Can I request a haircut tomorrow at 4?</div>
+<div class="m b">Slot available at 4:00pm. Your booking ID is #2041. See you then!</div>
+<div class="cap">Illustrative example</div>
+</div>
+</div>
+</div></div>
+
+<section id="what"><div class="wrap">
+<div class="tag">What it does</div>
+<h2>Everything a front desk answers all day, handled.</h2>
+<p class="sub">Built for businesses that still take bookings by phone and lose enquiries after hours.</p>
+<div class="grid">
+<div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.5 7.2L4 20l1-4.5A8 8 0 1 1 21 12z"/></svg></div><h3>Answers visitor questions</h3><p>Opening hours, services, prices and location, set up from the details you give us.</p></div>
+<div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><h3>Takes appointment requests</h3><p>Visitors pick an open slot and get a booking ID. Every request shows in your own dashboard.</p></div>
+<div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z"/></svg></div><h3>Works 24/7</h3><p>Lives on your own website and replies at any hour, so fewer visitors leave without an answer.</p></div>
+</div></div></section>
+
+<section class="alt"><div class="wrap">
+<div class="tag">Who it is for</div>
+<h2>Made for local, appointment-based businesses.</h2>
+<p class="sub">If customers usually call to ask or to book, a chat assistant can take the first step for you.</p>
+<div class="grid">
+<div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.5 15.5M14.5 14.5 20 20M8.5 8.5 12 12"/></svg></div><h3>Salons and barbers</h3><p>Services, timings and booking requests in one place.</p></div>
+<div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v6a4 4 0 0 0 8 0V3M10 13v2a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></svg></div><h3>Clinics and dentists</h3><p>Timings, common questions and appointment slots.</p></div>
+<div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5eead4" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5 5L3 18l3 3 6.7-6.7a4 4 0 0 0 5-5l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div><h3>Local services</h3><p>Repair shops, tutors, studios and anyone who books by phone today.</p></div>
+</div></div></section>
+
+<section id="how"><div class="wrap">
+<div class="tag">How it works</div>
+<h2>Live in three simple steps.</h2>
+<p class="sub">No technical work on your side.</p>
+<div class="grid steps">
+<div class="card step"><h3>Share your details</h3><p>Services, hours, contact and booking days.</p></div>
+<div class="card step"><h3>We build your chatbot</h3><p>Set up on its own link, ready to place on your site.</p></div>
+<div class="card step"><h3>Customers start chatting</h3><p>You manage slots and see requests in your dashboard.</p></div>
+</div></div></section>
+
+<section id="demo" class="alt"><div class="wrap">
+<div class="tag">Live demo</div>
+<h2>Try it yourself.</h2>
+<p class="sub">Fictional businesses running on the same system we would set up for you.</p>
+<div class="demo">
+<a class="dc" href="/s/c50994e0-702b-4666-8905-6d7a10eb9e9e"><b>Demo Dental Clinic</b><p>Ask about timings and request an appointment slot.</p><span>Open demo &rarr;</span></a>
+<a class="dc" href="/"><b>Demo Grocery Store</b><p>Check stock and place a test pickup request.</p><span>Open demo &rarr;</span></a>
+</div>
+<div class="note"><strong>Honest note:</strong> SAITAAS chatbots are rule-based. They follow the details you give us and do not use AI to make up answers. They run on your website and are not WhatsApp bots.</div>
+</div></section>
+
+<section id="contact"><div class="wrap">
+<div class="cta">
+<h2>Get a free demo built with your own services and hours.</h2>
+<p>No charge and no obligation. Tell us about your business and see your own chatbot.</p>
+<a class="btn p" href="mailto:deep.18ch@gmail.com?subject=SAITAAS%20demo%20request">Request your free demo</a>
+<span class="mail">or write to <a href="mailto:deep.18ch@gmail.com">deep.18ch@gmail.com</a></span>
+</div></div></section>
+
+<footer><div class="wrap"><span>&copy; 2026 SAITAAS</span><span>Founded by Deepanshu Chaudhary</span></div></footer>
+</body></html>
