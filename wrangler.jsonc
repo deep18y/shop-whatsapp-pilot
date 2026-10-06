@@ -1,0 +1,21 @@
+{
+  "name": "shop-whatsapp-pilot",
+  "main": "src/worker.mjs",
+  "compatibility_date": "2026-09-30",
+  "assets": {
+    "directory": "public",
+    "binding": "ASSETS"
+  },
+  "vars": {
+    "LIVE_SEND": "false",
+    "GRAPH_VERSION": "v23.0"
+  },
+  "preview_urls": false,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "shop-whatsapp-pilot",
+      "database_id": "de4bd6e1-6e47-448a-b33b-b53d8297d3ec"
+    }
+  ]
+}

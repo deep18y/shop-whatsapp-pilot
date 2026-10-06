@@ -1,0 +1,21 @@
+
+Cloudflare backend deploy only. WhatsApp is not connected yet.
+
+1. Install Node.js LTS from https://nodejs.org/en/download and reopen Terminal/PowerShell.
+2. Extract this zip. Open the wa-laptop folder containing wrangler.jsonc. Right-click inside that folder -> Open in Terminal (Windows). On Mac open Terminal and cd into that extracted folder.
+3. Run the commands below ONE AT A TIME. If npx asks to install Wrangler, type y. Login browser: choose your deep.18ch@gmail.com Cloudflare account and Allow.
+
+npx wrangler@latest login
+npx wrangler@latest d1 create shop-whatsapp-pilot --binding DB --update-config
+npx wrangler@latest d1 execute shop-whatsapp-pilot --remote --file=./schema.sql
+npx wrangler@latest deploy
+npx wrangler@latest secret put ADMIN_TOKEN
+
+ADMIN_TOKEN prompt: type a NEW long dashboard password (not Google/Cloudflare password) only in your Terminal. Input stays hidden. Keep it in a password manager; do not send it in chat.
+
+The deploy updates the existing shop-whatsapp-pilot starter. It can warn about overwriting dashboard changes. This is intended for THIS Worker only. No paid plan or domain required. If it asks for payment/upgrade, STOP. If database already exists or a command gives an error, stop and send a screenshot hiding passwords/tokens. Do not keep rerunning create.
+
+4. Open the Worker URL printed by deploy. Enter ADMIN_TOKEN in the private dashboard and add a labelled business block and stock.
+5. Tell us "backend deployed" and send only the URL or an error screenshot with secrets hidden. Next we configure Meta test number, server secrets and webhook. LIVE_SEND remains false until that test setup and approved send scope.
+
+This is a deterministic pilot, not AI. Owner dashboard requires manual refresh; no WhatsApp/push owner notification yet. No production client onboarding, cancellations or reliable send retry support yet. Free quotas can stop service. Do not sell it as finished.
